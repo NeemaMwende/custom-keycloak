@@ -4,7 +4,7 @@
     <#if section = "header">
     <#elseif section = "form">
         <div class="brand">
-            <img src="${url.resourcesPath}/img/logo.png" alt="Logo">
+            <img src="${url.resourcesPath}/img/keycloak-logo-textt.png" alt="Logo">
         </div>
         <#if realm.password>
             <form id="kc-form-login" action="${url.loginAction}" method="post" novalidate="novalidate">

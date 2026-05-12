@@ -30,6 +30,7 @@
         <div class="card">
             <#nested "header">
             <#nested "form">
+            <#nested "info">
         </div>
     </div>
 </body>
