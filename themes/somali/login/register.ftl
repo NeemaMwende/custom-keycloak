@@ -4,7 +4,7 @@
     <#if section = "header">
     <#elseif section = "form">
         <div class="brand">
-            <img src="${url.resourcesPath}/img/keycloak-bg.png" alt="Logo">
+            <img src="${url.resourcesPath}/img/logo.png" alt="Logo">
         </div>
         <#if realm.registrationAllowed>
             <form id="kc-register-form" action="${url.registrationAction}" method="post" novalidate="novalidate">
@@ -41,5 +41,8 @@
                 <button type="submit" class="btn-login">${msg("doRegister")}</button>
             </form>
         </#if>
+        <div class="signup-row">
+            <a href="${url.loginUrl}">« ${msg("backToLogin")}</a>
+        </div>
     </#if>
 </@layout.registrationLayout>
