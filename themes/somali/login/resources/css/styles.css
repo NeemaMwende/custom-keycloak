@@ -326,19 +326,13 @@ body {
 
 .pwd-toggle {
     position: absolute;
-
     top: 50%;
-    right: 14px;
-
+    right: 40px;
     transform: translateY(-50%);
-
     background: none;
     border: none;
-
     cursor: pointer;
-
     color: var(--text-muted);
-
     font-size: 15px;
 }
 

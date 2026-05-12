@@ -27,8 +27,8 @@
         <div class="dash-donut"></div>
     </div>
     <div class="card-wrap">
+        <#nested "header">
         <div class="card">
-            <#nested "header">
             <#nested "form">
             <#nested "info">
         </div>
