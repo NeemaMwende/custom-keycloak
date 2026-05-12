@@ -2,21 +2,23 @@
 <@layout.registrationLayout displayMessage=!messagesPerField.existsError('username','email','firstName','lastName','password','password-confirm'); section>
 
     <#if section = "header">
+        <h1 class="card-title">JS Reports</h1>
+        <p class="card-subtitle">Create your account</p>
     <#elseif section = "form">
         <div class="brand">
-            <img src="${url.resourcesPath}/img/keycloak-logo-textt.png" alt="Logo">
+            <img src="${url.resourcesPath}/img/keycloak-bg.png" alt="Logo">
         </div>
         <#if realm.registrationAllowed>
             <form id="kc-register-form" action="${url.registrationAction}" method="post" novalidate="novalidate">
                 <#if !usernameHidden??>
-                    <div class="field">
-                        <label class="field-label" for="username">
-                            <#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if>
-                        </label>
-                        <div class="input-wrap">
-                            <input id="username" name="username" value="${(register.formData.username)!''}" type="text" placeholder="${msg('username')}" autocomplete="username" required>
-                        </div>
-                    </div>
+                  <div class="field">
+                      <label class="field-label" for="username">
+                          <#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if>
+                      </label>
+                      <div class="input-wrap">
+                          <input id="username" name="username" value="${(register.formData.username)!''}" type="text" placeholder="${msg('username')}" autocomplete="username" required>
+                      </div>
+                  </div>
                 </#if>
                 <#if realm.registrationEmailAsUsername || !realm.loginWithEmailAllowed>
                     <div class="field">

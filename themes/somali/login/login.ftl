@@ -3,6 +3,7 @@
 
     <#if section = "header">
         <h1 class="card-title">JS Reports</h1>
+        <p class="card-subtitle">Securely continue to your dashboard</p>
     <#elseif section = "form">
         <div class="brand">
             <img src="${url.resourcesPath}/img/keycloak-bg.png" alt="Logo">
